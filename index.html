@@ -1,77 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/normalize.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <link rel="icon" type="image/x-icon" href="https://cdn3.emoji.gg/emojis/7122-happy-pepe.png" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn3.emoji.gg/emojis/7122-happy-pepe.png"
+    />
     <title>Melody Matrix</title>
-</head>
-    <body class="mx-6">
-        <header>
-            <div id="Matrix">
-                <h1 class="title is-size-1 has-text-centered py-5">Melody Matrix</h1>
-            </div>
-        </header>
+  </head>
+  <body class="mx-6">
+    <header>
+      <div id="Matrix">
+        <h1 class="title is-size-1 has-text-centered py-5">Melody Matrix</h1>
+      </div>
+    </header>
 
-        <div class="columns">
-            <aside class="column is-one-third">
-                <div class="search-form">
-                    <input type="text" class="input is-medium" id="search-input" placeholder="Search for a song" />
-                    <button 
-                    class="button is-medium is-fullwidth" id="search-button">Search
-                    </button>
-                        <div class="Previous-searchs box" > 
-                            <ul id="Previous-searchs">
-                                <li>filler</li>
-                                <li>filler</li>
-                                <li>filler</li>
-                                <li>filler</li>
-                                <li>filler</li>
-                                <li>filler</li>
-                            </ul>
-                        </div>
-                </div>
-            </aside>
-        <main class="column is-two-thirds is-offset-one-third">
-                <div class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd box">
-                    <div class="result column">song</div>
-                    <div class="result column">song</div>
-                    <div class="result column">song</div>
-                    <div class="result column">song</div>
-                    <div class="result column">song</div>
-                    <div class="result column">song</div>
-                </div>
-            <section class="box  column is-flex is-flex-wrap-wrap is-gaplesshas-text-justified">
-                <div class="Acover box column is-half " >
-                    <p>fillerdddddddddddd</p>
-                </div>
-                <div class="Songtitle box column is-half " >
-                    <p>fillerppppppppppppppppp</p>
-                </div>
-            </section>
-            <section class="box  column">
-                <div class="Wikipage  column is-full " >
-                    <p>fillerddddddddddddddddddpp</p>
-                </div>
-            </section>
-        </main>
-
-
-            
+    <div class="columns">
+      <aside class="column is-one-third">
+        <div class="search-form">
+          <input
+            type="text"
+            class="input is-medium"
+            id="search-input"
+            placeholder="Search for a song"
+          />
+          <button class="button is-medium is-fullwidth" id="search-button">
+            Search
+          </button>
+          <div class="Previous-searchs box">
+            <ul id="Previous-searchs card">
+              <li>filler</li>
+              <li>filler</li>
+              <li>filler</li>
+              <li>filler</li>
+              <li>filler</li>
+              <li>filler</li>
+            </ul>
+          </div>
         </div>
-            <footer class="has-text-centered footer column box is-full">
-                <!-- <p>made by Melody</p> -->
-            </footer>
-    </body>
-    
-    <script
-        src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-        crossorigin="anonymous">
-    </script>
-    <script src="./assets/js/script.js"></script>
+      </aside>
+
+      <main class="column is-two-thirds is-offset-one-third">
+        <div
+          class="columns is-flex is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd box"
+        >
+          <div class="result column">song</div>
+          <div class="result column">song</div>
+          <div class="result column">song</div>
+          <div class="result column">song</div>
+          <div class="result column">song</div>
+          <div class="result column">song</div>
+        </div>
+
+        <section
+          class="box column is-flex is-flex-wrap-wrap is-gaplesshas-text-justified"
+        >
+          <div class="Acover box column is-half">
+            <p>fillerdddddddddddd</p>
+          </div>
+          <div class="Songtitle box column is-half">
+            <p>fillerppppppppppppppppp</p>
+          </div>
+        </section>
+
+        <section class="box column">
+          <div class="Wikipage column is-full">
+            <p>fillerddddddddddddddddddpp</p>
+          </div>
+        </section>
+        
+      </main>
+    </div>
+    <footer class="has-text-centered footer column box is-full">
+      <!-- <p>made by Melody</p> -->
+    </footer>
+  </body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"
+  ></script>
+  <script src="./assets/js/script.js"></script>
 </html>
