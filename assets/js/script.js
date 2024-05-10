@@ -1,4 +1,5 @@
   /** DATA FIELDS **/
+  console.log(mockData);
 const searchInput = document.querySelector('#searchInput');
 const search = document.querySelector('#search-button');
 
@@ -49,6 +50,34 @@ function getSearchResults(){
     });
 }
 
+function getSearchResultsMock(){
+  // const url =`https://cors-anywhere.herokuapp.com/https://spotify-scraper.p.rapidapi.com/v1/search?term=${searchInput.value}`;
+  // const spotifySearch = {
+  //   // async: true,
+  //   // crossDomain: true,
+  //   method: 'GET',
+  //   headers: {
+  //     'X-RapidAPI-Key': '5cdbdb46f4mshcde17f8dbd80048p10af3fjsn0b917389a7cd',
+  //     'X-RapidAPI-Host': 'spotify-scraper.p.rapidapi.com'
+  //   }
+  // };
+
+  // fetch(url, spotifySearch)
+  //   .then(function (response) {
+  //     console.log(response);
+  //     return response.json();
+  //   })
+  //   .then(function (data) {
+  //     console.log(data);
+  //     displaySearchResults(data);
+  //   })
+  //   .catch(function (error) {
+  //     console.log(error);
+//     });
+
+displaySearchResults(mockData);
+}
+
 function displaySearchResults(data) {
   $('#searchResults').empty();
 
@@ -66,8 +95,8 @@ function displaySearchResults(data) {
     const trackUrl = `https://open.spotify.com/track/${trackId}`;
 
     const trackCard = $(`
-      <div class="card">
-        <img src="${albumArt}" class="card-img-top" alt="Album Art">
+      <div class="card column">
+        <img src="${albumArt}" class="card-img-top is-small" alt="Album Art">
         <div class="card-body">
           <h5 class="card-title">${trackName}</h5>
           <p class="card-text">${artist}</p>
@@ -84,7 +113,7 @@ function displaySearchResults(data) {
 
 search.addEventListener('click', function (event) {
   event.preventDefault();
-  getSearchResults();
+  getSearchResultsMock();
   let user = JSON.parse(localStorage.getItem('user'));
   if (!user) 
   {
