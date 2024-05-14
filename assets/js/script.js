@@ -160,6 +160,23 @@ search.addEventListener('click', async function (event) {
   //getSearchResultsMock();
   const result = await getArtistDetails(searchInput.value.trim())
   console.log(result);
+  const lyricsSection = document.getElementById("lyricsContainer");
+  for (let index = 0; index < result.length; index++) {
+    const element = JSON.parse(result[index]); // each hit becomes JSON obj
+    const newArticle = document.createElement('article'); // a new article tag
+    const songLyrics = document.createElement('p'); // a paragraph tag
+    const songTitle = document.createElement('h3'); // an h3 tag
+    const songArtist = document.createElement('h4'); // an h4 tag
+    songArtist.textContent = element.lyrics.tracking_data.primary_artist; // the artist
+    songTitle.textContent = element.lyrics.tracking_data.title; // the song title
+    songLyrics.textContent = element.lyrics.lyrics.body.plain; // the chunk of lyrics
+    newArticle.appendChild(songTitle); // add title to article
+    newArticle.appendChild(songArtist); // add artist to article
+    newArticle.appendChild(songLyrics); // add lyrics to article
+    lyricsSection.appendChild(newArticle);
+    const humanResources = document.createElement("hr");
+    lyricsSection.appendChild(humanResources);
+  }
   // document.body.textContent = result;
     let user = JSON.parse(localStorage.getItem('user'));
   if (!user) 
