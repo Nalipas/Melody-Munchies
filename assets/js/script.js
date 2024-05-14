@@ -109,8 +109,10 @@ const getSelectedTrackInfo = function(trackId) {
 
 search.addEventListener('click', function (event) {
   event.preventDefault();
-  getSearchResultsMock();
-  let user = JSON.parse(localStorage.getItem('user'));
+  //getSearchResultsMock();
+  const result = getArtistDetails(searchInput.value.trim())
+  console.log(result);
+    let user = JSON.parse(localStorage.getItem('user'));
   if (!user) 
   {
     user = {
