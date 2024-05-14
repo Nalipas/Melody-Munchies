@@ -4,6 +4,54 @@ const searchInput = document.querySelector('#searchInput');
 const search = document.querySelector('#search-button');
 const previousSearches = document.querySelector('#previousSearches');
 
+// ------- hoisting getArtistDetails()
+
+async function getArtistDetails(searchTerm){
+  // const url = `https://genius-song-lyrics1.p.rapidapi.com/song/lyrics/?id=2396871`;
+  let perPage = 5;
+  const url = `https://genius-song-lyrics1.p.rapidapi.com/search/?q=${searchTerm}&per_page=${perPage}&page=1`;
+  const options = {
+      method: 'GET',
+      headers: {
+          'X-RapidAPI-Key': 'eabcfc5b26msh2a8b38230c5fa40p11fd25jsnad44bd1aa8cb',
+          'X-RapidAPI-Host': 'genius-song-lyrics1.p.rapidapi.com'
+      }
+  };
+  try {
+      const response = await fetch(url, options);
+      const result = await response.json();
+      console.log(result);
+      let results = [];
+      for (let i = 0; i < result.hits.length; i++) {
+        // return each hit/result
+        const lyricsID = result.hits[i].result.id
+        const lyricsURL = `https://genius-song-lyrics1.p.rapidapi.com/song/lyrics/?id=${lyricsID}&text_format=plain`;
+        const lyricsOptions = {
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key': 'eabcfc5b26msh2a8b38230c5fa40p11fd25jsnad44bd1aa8cb',
+                'X-RapidAPI-Host': 'genius-song-lyrics1.p.rapidapi.com'
+            }
+        };
+        try {
+            const lyricsResponse = await fetch(lyricsURL, lyricsOptions);
+            const lyricsResult = await lyricsResponse.text();
+            console.log(lyricsResult);
+            // return lyricsResult;
+            results.push(lyricsResult);
+        } catch (error) {
+            console.error(error);
+        }
+      }
+      return results;
+  } catch (error) {
+      console.error(error);
+  }
+  // const url = `https://spotify23.p.rapidapi.com/search/?q=${searchTerm}&type=multi&offset=0&limit=10&numberOfTopResults=5`;
+}
+
+// -------
+
 // $.ajax(trackData).done(function (response) {
 //	console.log(response);
 //});
@@ -107,11 +155,12 @@ const getSelectedTrackInfo = function(trackId) {
   };
 }
 
-search.addEventListener('click', function (event) {
+search.addEventListener('click', async function (event) {
   event.preventDefault();
   //getSearchResultsMock();
-  const result = getArtistDetails(searchInput.value.trim())
+  const result = await getArtistDetails(searchInput.value.trim())
   console.log(result);
+  // document.body.textContent = result;
     let user = JSON.parse(localStorage.getItem('user'));
   if (!user) 
   {
