@@ -15,12 +15,13 @@
       type="image/x-icon"
       href="https://cdn3.emoji.gg/emojis/7122-happy-pepe.png"
     />
-    <title>Melody Matrix</title>
+    <title>Melody Munchies</title>
   </head>
   <body class="mx-6">
     <header>
       <div id="Matrix">
-        <h1 class="title is-size-1 has-text-centered py-5 is-underlined">Melody Matrix</h1>
+        <h1 class="title is-size-1 has-text-centered py-5 is-underlined">Melody Munchies</h1>
+        <h2 class="subtitle is-size-3 has-text-centered">Harmonize your hunger!</h2>
       </div>
     </header>
 
@@ -36,19 +37,22 @@
           <button class="button is-medium is-fullwidth" id="search-button">
             Search
           </button>
-          <div id="previousMusicSearches" class="section is-medium box my-4">
+          <div class="section is-medium box my-4">
+            <ul id="previousSearches card">
+              
+            </ul>
           </div>
           <input
           type="text"
           class="input is-medium"
-          id="recipe"
-          placeholder="Search for some recipes!"
+          id="lyricsQuery"
+          placeholder="Search for some lyrics!"
           />
-          <button class="button is-medium is-fullwidth" id="recipe">
+          <button class="button is-medium is-fullwidth" id="lyrics-button">
             Search
           </button>
           <div class="section is-medium box my-4">
-            <ul id="recipeResults" class=" recipe-card">
+            <ul id="lyricsResults card">
               
             </ul>
           </div>
@@ -67,7 +71,7 @@
           </div>
         </section>
 
-        <section id="recipe">
+        <section id="lyricsContainer">
 
         </section>
 
@@ -75,7 +79,10 @@
     </div>
     <footer class="has-text-centered box column  is-full">
       <p>Made by some Rushin' Hackers.</p>
+      <a href="https://github.com/Nalipas/Melody-Matrix">GitHub Repository</a>
     </footer>
+</body>
+</html>
 
     <script
     src="https://code.jquery.com/jquery-3.7.1.js"
@@ -83,7 +90,7 @@
     crossorigin="anonymous"
     ></script>
     <script src="./assets/js/temp.js" type="text/javascript"></script>
-    <script src="./assets/js/recipe.js"></script>
+    <!-- <script src="./assets/js/artist.js"></script> -->
     <script src="./assets/js/script.js"></script>
   </body>
 
