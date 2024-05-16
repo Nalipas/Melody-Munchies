@@ -86,6 +86,7 @@ function getSearchResults(){
     });
 }
 
+
 // Displays search results in the search results section on the page
 function displaySearchResults(data) {
   $('#searchResults').empty();
