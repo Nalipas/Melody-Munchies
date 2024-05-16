@@ -1,13 +1,14 @@
 /** DATA FIELDS **/
 
-const searchInput = $("#searchInput");
 const search = $("#search-button");
 const previousMusicSearches = $("#previousMusicSearches");
 let musicHistory;
 
 // Retrieves search results from Spotify based on user search query
 function getSearchResults() {
-  const url = `https://cors-anywhere.herokuapp.com/https://spotify23.p.rapidapi.com/search/?q=${searchInput.value}&type=multi&offset=0&limit=10&numberOfTopResults=5`;
+  const searchInput = $("#searchInput");
+  console.log(searchInput);
+  const url = `https://cors-anywhere.herokuapp.com/https://spotify23.p.rapidapi.com/search/?q=${searchInput[0].value}&type=multi&offset=0&limit=10&numberOfTopResults=5`;
   const spotifySearch = {
     async: true,
     crossDomain: true,
@@ -73,7 +74,7 @@ function displaySearchResults(data) {
 
 function displayMusicSearchHistory() {
   const musicSearchHistory =
-    JSON.parse(localStorage.getItem("musicSearchHistory")) || [];
+    JSON.parse(localStorage.getItem("musicQueries")) || [];
   $("#previousMusicSearches").empty();
 
   if (musicSearchHistory.length === 0) {
@@ -97,6 +98,7 @@ function displayMusicSearchHistory() {
 
 $("#search-button").on("click", function (event) {
   event.preventDefault();
+  console.log("search button pressed");
   musicQuery = $("#searchInput").val();
   if (musicQuery.trim() !== "");
   {
@@ -109,6 +111,7 @@ $("#search-button").on("click", function (event) {
       }
       localStorage.setItem("musicSearchHistory", JSON.stringify(history));
       displayMusicSearchHistory();
+      getSearchResults();
     }
   }
 });

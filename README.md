@@ -144,6 +144,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 Steven Ray Sapilan Moreno - [@msteven14](https://twitter.com/msteven14) - smoreno2014@gmail.com
+Faiza
+Saima
+Gio
+Alex 
 
 Project Link: [https://github.com/Nalipas/Melody-Matrix](https://github.com/Nalipas/Melody-Matrix)
 
@@ -156,6 +160,7 @@ Project Link: [https://github.com/Nalipas/Melody-Matrix](https://github.com/Nali
 
 * Thanks to [Mark Carlson](https://github.com/mark-carlson) for instructor support!
 * Thanks to [Clarence Cheung](https://github.com/kleranscoding) for TA support!
+* 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
