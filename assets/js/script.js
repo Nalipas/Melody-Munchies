@@ -103,13 +103,16 @@ function displaySearchResults(data) {
     
     // Creates new 'trackCard' elements for each search result
     const trackCard = $(`
-      <div class="card column">
-        <img src="${albumArt}" class="column card-img-top is-medium" alt="Album Art">
-        <div class="card-body">
-          <h5 class="card-title">${trackName}</h5>
-          <p class="card-text">${artist}</p>
-          <p class="card-text">${albumName}</p>
+      <a href="${trackUrl}" target="_blank">
+        <div class="card column">
+            <img src="${albumArt}" class="column card-img-top is-medium" alt="Album Art"></a>
+          <div class="card-body">
+            <h5 class="card-title">${trackName}</h5>
+            <p class="card-text">${artist}</p>
+            <p class="card-text">${albumName}</p>
+          </div>
         </div>
+      </a>
   `)
     // Appends the trackCard to the results div
     results.append(trackCard);
