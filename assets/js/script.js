@@ -178,13 +178,68 @@ search.addEventListener('click', function (event) {
 });
 
 // Retrieves searches and searchId from localStorage
-let previousSeraches = JSON.parse(localStorage.getItem("user"));
-if (previousSeraches === null) {
-  previousSeraches = [];
-}
 
-let SearchId = JSON.parse(localStorage.getItem("SearchId"))
-  ? JSON.parse(localStorage.getItem("SearchId"))
-  : [];
+  const previousSeraches = JSON.parse(localStorage.getItem(`search`));
+  if (previousSeraches === null) {
+    previousSeraches.css("none");
+  } else {
+    previousSeraches.css("box");
+  }
+
+  const SearchId = JSON.parse(localStorage.getItem("SearchId"))
+    ? JSON.parse(localStorage.getItem("SearchId"))
+    : [];
+  console.log(previousSeraches);
+
+
+
+// function displaySearchHistory() {
+//   const history = JSON.parse(localStorage.getItem("cities")) || [];
+//   $("#search-history").empty();
+//   if(history.length === 0) {
+//       searchHistory.css("border", "none");
+//       forecast.css("border", "none");
+//   } else {
+//       searchHistory.css("border", "1px solid black");
+//       forecast.css("border", "1px solid black");
+//   }
+//   for(let i = 0; i < history.length; i++) {
+//       const historyButton = $("<button>").text(history[i]);
+//       $("#search-history").append(historyButton);
+//       if (history.length > 0) {
+//           city = history[0];
+//           getWeather();
+//           getForecast();
+//       }
+//   }
+// }
+
+function logSearches() {
+  const searchList = JSON.parse$('#previousSearches').empty();
+
+   let searchHistory= $(`
+   <div class="section"> 
+    <ul id="perviousSearch">
+      <li>${previousSeraches}</li>
+    </ul>
+  </div>
+  `);
+  console.log(searchHistory);
+
+  previousSeraches.forEach(searchItem => {
+    const searchs = $(`< class="list-group-item">${searchItem}</>`);
+    searchList.append(searchs);
+
+  });
+  $('#previousSearches').append(searchHistory);
+
+  $('#previousSearches').append(searchList);
+
+  SearchId.forEach(searchItem => {
+    const searchId = $(`<li class="list-group-item">${searchItem}</li>`);
+    $('#previousSearches').append(searchId);
+    localStorage.setItem(searchItem, searchItem);
+  });
+}
 
 
