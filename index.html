@@ -37,6 +37,7 @@
           <button class="button is-medium is-fullwidth" id="search-button">
             Search
           </button>
+
           <input
           type="text"
           class="input is-medium"
@@ -46,6 +47,27 @@
           <button class="button is-medium is-fullwidth" id="recipeSearchButton">
             Search
           </button>
+
+          <div class="section is-medium box my-4">
+            <ul id="previousSearches card">
+              
+            </ul>
+          </div>
+          <input
+          type="text"
+          class="input is-medium"
+          id="lyricsQuery"
+          placeholder="Search for some lyrics!"
+          />
+          <button class="button is-medium is-fullwidth" id="lyrics-button">
+            Search
+          </button>
+          <div class="section is-medium box my-4">
+            <ul id="lyricsResults card">
+              
+            </ul>
+          </div>
+
         </div>
       </aside>
 
@@ -55,8 +77,20 @@
         >
         </div>
 
+
         <div id="recipeResults" class="custom-card-container section is-medium box column">
         </div>
+        <section class="section is-medium box column">
+          <div class="Wikipage  column is-full">
+            
+          </div>
+        </section>
+
+        <section id="lyricsContainer">
+
+        </section>
+
+
       </main>
     </div>
     <footer class="has-text-centered box column is-full">
@@ -72,7 +106,11 @@
     crossorigin="anonymous"
     ></script>
     <script src="./assets/js/temp.js" type="text/javascript"></script>
+
     <script src="./assets/js/recipe.js" type="text/javascript"></script>
+
+    <!-- <script src="./assets/js/artist.js"></script> -->
+
     <script src="./assets/js/script.js"></script>
   </body>
 
