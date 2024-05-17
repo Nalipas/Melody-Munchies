@@ -153,6 +153,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
+
 Project Link: [https://github.com/Nalipas/Melody-Matrix](https://github.com/Nalipas/Melody-Matrix)
 
 Steven Ray Sapilan Moreno - [@msteven14](https://twitter.com/msteven14) - [GitHub: Nalipas](https://github.com/Nalipas) - smoreno2014@gmail.com
@@ -171,7 +172,11 @@ Saima Yunus - [GitHub: saimayunus925](http://github.com/saimayunus925) - saimayu
 ## Acknowledgments
 
 * Thanks to [Mark Carlson](https://github.com/mark-carlson) for instructor support!
+
 * Thanks to [Clarence Cheung](https://github.com/kleranscoding) and [Mariah Wear](https://github.com/mariahw4) for TA support!
+
+* Thanks to [Clarence Cheung](https://github.com/kleranscoding) for TA support!
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

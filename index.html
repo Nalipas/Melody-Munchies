@@ -21,7 +21,7 @@
     <header>
       <div id="Matrix">
         <h1 class="title is-size-1 has-text-centered py-5 is-underlined">Melody Munchies</h1>
-        <h2 class="subtitle is-size-3 has-text-centered">Harmonize your hunger!</h2>
+        <h2 class="subtitle is-size-4 pb-4 has-text-centered">Harmonize your hunger!</h2>
       </div>
     </header>
 
@@ -37,47 +37,34 @@
           <button class="button is-medium is-fullwidth" id="search-button">
             Search
           </button>
-          <div class="section is-medium box my-4">
-            <ul id="previousSearches card">
-              
-            </ul>
-          </div>
+
           <input
           type="text"
           class="input is-medium"
-          id="lyricsQuery"
-          placeholder="Search for some lyrics!"
+          id="recipeInput"
+          placeholder="Search for some recipes!"
           />
-          <button class="button is-medium is-fullwidth" id="lyrics-button">
+          <button class="button is-medium is-fullwidth" id="recipeSearchButton">
             Search
           </button>
-          <div class="section is-medium box my-4">
-            <ul id="lyricsResults card">
-              
-            </ul>
-          </div>
+
         </div>
       </aside>
 
       <main class="column is-two-thirds is-offset-one-third">
         <div
-          class="custom-card-container section box column is-medium is-flex is-variable is-full" id="searchResults"
+          class="custom-card-container  section box column is-small is-flex is-variable is-full" id="searchResults"
         >
         </div>
 
-        <section class="section is-medium box column">
-          <div class="Wikipage  column is-full">
-            
-          </div>
-        </section>
 
-        <section id="lyricsContainer">
+        <div id="recipeResults" class="custom-card-container section is-small box column">
+        </div>
 
-        </section>
 
       </main>
     </div>
-    <footer class="has-text-centered box column  is-full">
+    <footer class="has-text-centered box column is-full">
       <p>Made by some Rushin' Hackers.</p>
       <a href="https://github.com/Nalipas/Melody-Matrix">GitHub Repository</a>
     </footer>
@@ -90,7 +77,7 @@
     crossorigin="anonymous"
     ></script>
     <script src="./assets/js/temp.js" type="text/javascript"></script>
-    <!-- <script src="./assets/js/artist.js"></script> -->
+    <script src="./assets/js/recipe.js" type="text/javascript"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 
