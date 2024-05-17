@@ -59,6 +59,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#project-description">Project Description</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -82,11 +83,19 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Melody Matrix is a music search app, which scrubs through a music database to help you find a song to listen to! The application will scrub through [insert first API here] and return 5 songs for you to choose from. After the user selects a song, more details are shown, and some extra information about the artist pulled from [insert second API here] is displayed below.
+Melody Matrix is a music search app, which scrubs through a music database to help you find a song to listen to! The application will scrub through [the Spotify API](https://rapidapi.com/Glavier/api/spotify23/) and return 5 songs for you to choose from. After the user selects a song, more details are shown, and some extra information about the artist pulled from [the Tasty API](https://rapidapi.com/apidojo/api/tasty) is displayed below.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Project Description
 
+* Melody Munchies incorporates music and food to come together; while listening to music, you'll always want to munch on something that goes hand-in-hand with the music. So, feel free to choose a recipe that complements your music! 
+* The application pulls data from the Spotify API and narrows it down to the first 5 results for the song the user's searching for. 
+* Similarly, when the user searches for a recipe, the application pulls data from the Tasty API and returns the first 5 results of the user's search query.
+
+### Challenges We Faced
+
+Our APIs were initially rate-limited (only a set amount of pulls). Next time, we'll choose APIs where we're given many data pulls so we don't have to compromise our project's vision.
 
 ### Built With
 
@@ -115,6 +124,7 @@ You can find the deployed website hosted at https://nalipas.github.io/Melody-Mat
 
 
 <!-- USAGE EXAMPLES -->
+
 ## Usage
 
 When visiting the application hosted at <a href="https://nalipas.github.io/Melody-Matrix/">https://nalipas.github.io/Melody-Matrix</a> the user is presented with a blank page, and is prompted to search for a song.
@@ -143,13 +153,16 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Steven Ray Sapilan Moreno - [@msteven14](https://twitter.com/msteven14) - smoreno2014@gmail.com
-Faiza
-Saima
-Gio
-Alex 
 
 Project Link: [https://github.com/Nalipas/Melody-Matrix](https://github.com/Nalipas/Melody-Matrix)
+
+Steven Ray Sapilan Moreno - [@msteven14](https://twitter.com/msteven14) - [GitHub: Nalipas](https://github.com/Nalipas) - smoreno2014@gmail.com
+
+Gio Cagliari - [GitHub: GeoMaster101](https://github.com/GeoMaster101) - Giovannicagliari73@gmail.com
+
+Faiza Haque - [GitHub: Faiza-Haque](https://github.com/Faiza-Haque) - faizahaque90@gmail.com
+
+Saima Yunus - [GitHub: saimayunus925](http://github.com/saimayunus925) - saimayunus925@gmail.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -159,8 +172,11 @@ Project Link: [https://github.com/Nalipas/Melody-Matrix](https://github.com/Nali
 ## Acknowledgments
 
 * Thanks to [Mark Carlson](https://github.com/mark-carlson) for instructor support!
+
+* Thanks to [Clarence Cheung](https://github.com/kleranscoding) and [Mariah Wear](https://github.com/mariahw4) for TA support!
+
 * Thanks to [Clarence Cheung](https://github.com/kleranscoding) for TA support!
-* 
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
