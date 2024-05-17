@@ -1,6 +1,9 @@
+const recipeInput = $("#recipeInput");
 
 function getRecipeResults() {
-	const url = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=under_30_minutes';
+	const recipeInput = $("#recipeInput");
+	console.log(recipeInput);
+	const url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=${recipeInput[0].value}`;
 	const tastySearch = {
 		method: 'GET',
 		headers: {
@@ -22,7 +25,6 @@ function getRecipeResults() {
 			console.log(error);
 		});
 }
-getRecipeResults();
 
 //Displays search resuts in the search result section on the page
 function displaygetRecipeResults(data) {
@@ -34,34 +36,31 @@ function displaygetRecipeResults(data) {
 
 	for (let i = 0; i <= 4; i++) {
 		const recipeName = data.results[i].slug;
+		const recipeNameClean = data.results[i].name;
 		const recipePicture = data.results[i].thumbnail_url;
-		const actualRecipe = data.results[i].instructions;
-		const recipeVideo = data.results[i].video_url;
-		const recipeURL = `https://tasty.p.rapidapi.com/recipes/${recipeName}`;
+		const recipeURL = `https://tasty.co/recipe/${recipeName}`;
 		//Creates new 'recipeCard' elements for each search results 
 		const recipeCard = $(`
-<div class="card column">
-  <img src="${recipePicture}" class="column card-img-top is-medium" alt="Album Art">
-  <div class="card-body">
-	<h5 class="card-title">${recipeName}</h5>
-	<video> <source src=${recipeVideo}/>  </video>
-	<p class="card-text"><ul>${actualRecipe.map((step) => { return `<li> ${step.display_text}</li>` })}</ul></p>
-  </div>
-`);
+			<div class="card column">
+				<a href="${recipeURL}" target="_blank">
+					<img src="${recipePicture}" class="column card-img-top is-medium" alt="Album Art"></a>
+					<div class="card-body">
+						<h5 class="card-title">${recipeNameClean}</h5>
+					</div>
+			</div>
+		`);
 		// append the recipeCard to the results div
 		recipes.append(recipeCard);
-
-
-
 	}
-
-
-
-
 	//appends the results dib to recipeResults div
 	$('#recipeResults').append(recipes)
 };
 
+$("#recipeSearchButton").on("click", function (event) {
+	event.preventDefault();
+	console.log("recipe button pressed");
+	getRecipeResults();
+});
 
 
 
