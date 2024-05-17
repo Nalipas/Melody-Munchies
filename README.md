@@ -82,7 +82,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Melody Matrix is a music search app, which scrubs through a music database to help you find a song to listen to! The application will scrub through [insert first API here] and return 5 songs for you to choose from. After the user selects a song, more details are shown, and some extra information about the artist pulled from [insert second API here] is displayed below.
+Melody Matrix is a music search app, which scrubs through a music database to help you find a song to listen to! The application will scrub through [the Spotify API](https://rapidapi.com/Glavier/api/spotify23/) and return 5 songs for you to choose from. After the user selects a song, more details are shown, and some extra information about the artist pulled from [the Tasty API](https://rapidapi.com/apidojo/api/tasty) is displayed below.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -155,7 +155,7 @@ Project Link: [https://github.com/Nalipas/Melody-Matrix](https://github.com/Nali
 ## Acknowledgments
 
 * Thanks to [Mark Carlson](https://github.com/mark-carlson) for instructor support!
-* Thanks to [Clarence Cheung](https://github.com/kleranscoding) for TA support!
+* Thanks to [Clarence Cheung](https://github.com/kleranscoding) and [Mariah Wear](https://github.com/mariahw4) for TA support!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
