@@ -1,4 +1,5 @@
 const recipeInput = $("#recipeInput");
+const searchHistoryDiv = $("#searchHistory")
 
 function getRecipeResults() {
 	const recipeInput = $("#recipeInput");
@@ -23,6 +24,7 @@ function getRecipeResults() {
 
 		.catch(function (error) {
 			console.log(error);
+			$('#recipeResults').append("<p>An error has occured. Please try again.</p>")
 		});
 }
 
@@ -60,7 +62,51 @@ $("#recipeSearchButton").on("click", function (event) {
 	event.preventDefault();
 	console.log("recipe button pressed");
 	getRecipeResults();
+
+
+	// save to local storage
+	const recipesArr = JSON.parse(localStorage.getItem('searched-recipes')) || [];
+	if(recipesArr.includes(recipeInput.val())) {
+		console.log("Already saved!")
+		loadSearchhistory()
+
+	} else {
+		recipesArr.push(recipeInput.val());
+
+		localStorage.setItem('searched-recipes', JSON.stringify(recipesArr));
+		loadSearchhistory()
+	}
+
 });
 
+function loadSearchhistory() {
+    const recipesArr = JSON.parse(localStorage.getItem('searched-recipes')) || [];
+    //                      0            1             2
+    if (recipesArr) {
+        // searchHistoryDiv.innerHTML = ""
+		searchHistoryDiv.empty()
+
+        for (i = 0; i < recipesArr.length; i++) {
+            let searchedRecipeBtn = document.createElement("button");
+            searchedRecipeBtn.textContent = recipesArr[i];
+            searchedRecipeBtn.addEventListener("click", function (event) {
+
+                console.log(event.target.textContent)
+
+                recipeInput.val(event.target.textContent)
+                $("#recipeSearchButton").click()
+
+                // https://api.openweathermap.org/data/2.5/forecast?q=&appid=4df3041d75d070a2b702feea67f93a6c&units=imperial
+
+
+            })
+
+            searchHistoryDiv.append(searchedRecipeBtn);
+        }
+
+        console.log(recipesArr)
+    }
+}
+loadSearchhistory()
 
 

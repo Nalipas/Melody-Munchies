@@ -7,3 +7,16 @@
 .previousSeraches {
     
 }
+
+#searchHistory {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+#searchHistory button {
+    background-color: bisque !important;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 3px;
+}
